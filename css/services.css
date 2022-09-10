@@ -1,0 +1,170 @@
+.offer {
+    background: var(--color-secondary);
+    color: var(--white-color);
+}
+
+.offer__container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.offer__container figure {
+    background: var(--color-primary);
+    padding: 10px;
+    cursor: pointer;
+    border: 1px solid var(--color-primary);
+    transition: var(--transition);
+}
+
+.offer__container figure:hover {
+    background: transparent;
+}
+
+.offer__container figure .fig__img {
+    font-size: 35px;
+    height: 70px;
+    width: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px auto;
+    border-radius: 50%;
+    background: var(--color-secondary);
+    border: 1px solid var(--color-primary);
+    transition: var(--transition);
+}
+
+.offer__container figure .fig__img:hover {
+    background: transparent;
+}
+
+.offer__container figure figcaption {
+    text-align: center;
+}
+
+.bottles__container {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.bottle__info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 2rem;
+}
+
+.info__left {
+    padding: 15px 0;
+    border-right: 4px solid var(--color-secondary);
+}
+
+.bottle__offer {
+    width: 100%;
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    justify-content: space-between;
+    z-index: -2;
+}
+
+.bottle__offer figure {
+    padding: 10px;
+    background: var(--color-secondary);
+    border: 1px solid var(--color-secondary);
+    color: var(--white-color);
+    transition: var(--transition);
+}
+
+.bottle__offer figure:hover {
+    background: var(--color-gradient2);
+}
+
+.bottles a {
+    cursor: pointer;
+}
+
+.bottle__offer figcaption h4 {
+    margin: 5px 0;
+}
+
+.popup {
+    background: var(--color-primary);
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    display: none;
+    transform: translate(-50%, -50%)scale(0.1);
+}
+
+.popup__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100%;
+    gap: 2rem;
+}
+
+.popup__left {
+    border: 1px solid black;
+}
+
+.popup__left img {
+    height: 100%;
+}
+
+
+.popup__right {
+    border: 1px solid black;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (max-width: 1024px) {
+    .offer__container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .bottle__offer figure .fig__img {
+        height: fit-content;
+    }
+
+    .bottle__offer figure .fig__img img {
+        height: 100%;
+        height: fit-content;
+    }
+
+    .bottle__offer {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .offer__container {
+        grid-template-columns: 1fr;
+    }
+
+    .bottle__info {
+        grid-template-columns: 1fr;
+        gap: 0.4rem;
+    }
+
+    .info__left {
+        border: none;
+    }
+
+    .bottle__offer {
+        grid-template-columns: 1fr;
+    }
+
+    .bottle__offer figure .fig__img {
+        height: fit-content;
+        /* height: 400px; */
+    }
+}
